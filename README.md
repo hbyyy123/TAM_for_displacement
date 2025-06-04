@@ -19,6 +19,8 @@
 <img src="https://img.shields.io/badge/%F0%9F%9A%80-SUSTech_VIP_Lab-ed6c00.svg?style=flat-square">
 </a>
 </div>
+> ⚠️ **This README has been modified** to reflect project-specific adjustments for displacement tracking.  
+> It includes updated environment requirements (Python 3.10) and custom checkpoints setup instructions.
 
 ***Track-Anything*** is a flexible and interactive tool for video object tracking and segmentation. It is developed upon [Segment Anything](https://github.com/facebookresearch/segment-anything), can specify anything to track and segment via user clicks only. During tracking, users can flexibly change the objects they wanna track or correct the region of interest if there are any ambiguities. These characteristics enable ***Track-Anything*** to be suitable for: 
 - Video object tracking and segmentation with shot changes. 
