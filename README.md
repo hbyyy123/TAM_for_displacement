@@ -82,7 +82,7 @@ To recreate the environment:
 conda create -n tam python=3.10 -y
 conda activate tam
 pip install -r requirements.txt
-
+```
 ## :computer: Get Started
 #### Linux & Windows
 ```shell
