@@ -97,6 +97,33 @@ pip install -r requirements.txt
 python app.py --device cuda:0
 # python app.py --device cuda:0 --sam_model_type vit_b # for lower memory usage
 ```
+## :file_folder: Checkpoints Requirement
+
+Before running the tracking or inpainting modules, please manually create a folder named `checkpoints` in the project root and place the following pre-trained model files inside:
+
+- `sam_vit_h_4b8939.pth` – Segment Anything Model (SAM)  
+- `XMem-s012.pth` – XMem memory network for long-term tracking  
+- `E2FGVI-CVPR22.pth` – Inpainting model
+
+```bash
+mkdir checkpoints
+# Place all .pth files inside this folder
+
+## :wrench: Custom Scripts for Displacement Tracking
+
+The following Python scripts were added to this repository to support displacement tracking analysis:
+
+- `disp_output_point.py`  
+  → Extracts displacement directly from masked video frames by detecting mask colors.  
+  ✅ Suitable for cases where masks are clearly visible and uniformly colored.
+
+- `calc_centroid_disp.py`  
+  → Computes displacement by calculating the centroid from per-frame `.npy` mask files.
+
+- `show_npy.py`  
+  → Visualizes `.npy` mask files frame-by-frame for inspection and verification.
+
+> These scripts were developed specifically for the displacement-tracking extension of the Track-Anything project.
 
 
 ## :book: Citation
