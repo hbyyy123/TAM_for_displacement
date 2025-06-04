@@ -108,7 +108,7 @@ Before running the tracking or inpainting modules, please manually create a fold
 ```bash
 mkdir checkpoints
 # Place all .pth files inside this folder
-
+```
 ## :wrench: Custom Scripts for Displacement Tracking
 
 The following Python scripts were added to this repository to support displacement tracking analysis:
