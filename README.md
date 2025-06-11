@@ -75,6 +75,7 @@ This repository has been adapted for our displacement-tracking project and now u
 
 - ✅ **Python 3.10**
 - ✅ Updated `requirements.txt` with minimal, clean dependencies
+- ✅ **cuda version--12.4**
 
 To recreate the environment:
 
