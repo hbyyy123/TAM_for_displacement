@@ -80,24 +80,19 @@ This repository has been adapted for our displacement-tracking project and now u
 To recreate the environment:
 
 ```bash
-conda create -n tam python=3.10 -y
-conda activate tam
-pip install -r requirements.txt
-```
-## :computer: Get Started
-#### Linux & Windows
-```shell
 # Clone the repository:
-git clone https://github.com/gaomingqi/Track-Anything.git
+git clone https://github.com/hbyyy123/TAM_for_displacement
 cd Track-Anything
 
 # Install dependencies: 
+conda create -n tam python=3.10 -y
+conda activate tam
 pip install -r requirements.txt
 
-# Run the Track-Anything gradio demo.
-python app.py --device cuda:0
-# python app.py --device cuda:0 --sam_model_type vit_b # for lower memory usage
+# Run the Track-Anything
+python app.py --device cuda:0 --port 12212 --mask_save True
 ```
+
 ## :file_folder: Checkpoints Requirement
 
 Before running the tracking or inpainting modules, please manually create a folder named `checkpoints` in the project root and place the following pre-trained model files inside:
@@ -118,7 +113,7 @@ The following Python scripts were added to this repository to support displaceme
   → Extracts displacement directly from masked video frames by detecting mask colors.  
   ✅ Suitable for cases where masks are clearly visible and uniformly colored.
 
-- `calc_centroid_disp.py`  
+- `mask_disp.py`  
   → Computes displacement by calculating the centroid from per-frame `.npy` mask files.
 
 - `show_npy.py`  
